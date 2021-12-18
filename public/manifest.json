@@ -1,0 +1,18 @@
+{
+  "name": "TLDR; it",
+  "description": "TLDR-it is a Free online community based text summarizing tool",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open TLDR-it"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  }
+}
