@@ -5,7 +5,8 @@ import React, {
   createContext,
   FunctionComponent
 } from 'react';
-import Base64 from 'crypto-js/enc-base64url';
+import Base64 from 'crypto-js/enc-base64';
+import base64url from 'base64url';
 import sha256 from 'crypto-js/sha256';
 import { v4 as uuid4 } from 'uuid';
 
@@ -71,7 +72,8 @@ const defaultSummary = (hash: string, url: string): Summary => ({
 const useProvideSummary = (url: URL) => {
   const [summary, setSummary] = useState<Summary>(null);
 
-  const hash = Base64.stringify(sha256(url.href));
+  const base64hash = Base64.stringify(sha256(url.href));
+  const hash = base64url.fromBase64(base64hash);
 
   const addSummary = (text: string) => {
     let newSummary = summary || defaultSummary(hash, url.href);
