@@ -1,0 +1,21 @@
+name: Tagged build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Building
+        run: yarn && yarn build
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          REPO_OWNER: medartus
+          SOURCE: build
+          WITH_V: true
