@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Building
-        run: yarn && yarn build && ls && cd build && ls
+        run: yarn && yarn build
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@master
         env:
