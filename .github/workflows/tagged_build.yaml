@@ -2,20 +2,32 @@ name: Tagged build
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v1
+        with:
+          fetch-depth: 0 # need this for all history for all branches and tags
       - name: Building
         run: yarn && yarn build
-      - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          REPO_OWNER: medartus
-          SOURCE: build
-          WITH_V: true
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: 'zip'
+          filename: 'extension.zip'
+          path: 'build'
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'extension.zip'
+          bodyFile: 'install.md'
+          allowUpdates: true
+          removeArtifacts: true
+          generateReleaseNotes: true
+          token: ${{ secrets.TOKEN }}
