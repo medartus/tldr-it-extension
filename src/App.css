@@ -2,6 +2,10 @@
   background-image: linear-gradient(135deg, #684ca0 35%, #1c4ca0 100%);
 }
 
+.button {
+  cursor: pointer;
+}
+
 .loader {
   border-top-color: #3498db;
   -webkit-animation: spinner 1.5s linear infinite;

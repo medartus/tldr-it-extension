@@ -14,7 +14,7 @@ const NotSupported = () => {
         </div>
         <p
           onClick={() => window.close()}
-          className="w-max text-lg border border-white rounded p-4"
+          className="button w-max text-lg border border-white rounded p-4"
         >
           Close the window
         </p>

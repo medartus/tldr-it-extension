@@ -39,7 +39,7 @@ export const Creator = () => {
           </div>
           <p
             onClick={() => setShareSummary(shareSummary + 1)}
-            className="w-full text-lg text-center py-2 text-white bg-blue-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+            className="button w-full text-lg text-center py-2 text-white bg-blue-500 rounded-md focus:bg-indigo-600 focus:outline-none"
           >
             Share you summary with the community! 🎉
           </p>

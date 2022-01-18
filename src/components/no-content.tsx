@@ -15,12 +15,14 @@ const NoContent = () => {
             Be the first one in the community to add some summary!
           </div>
         </div>
-        <p
-          onClick={() => navigate('/add')}
-          className="w-max text-lg border border-white rounded p-4"
-        >
-          Let's get started !🚀
-        </p>
+        <div>
+          <p
+            onClick={() => navigate('/add')}
+            className="button w-max text-lg border border-white rounded p-4"
+          >
+            Let's get started !🚀
+          </p>
+        </div>
       </div>
     </div>
   );
