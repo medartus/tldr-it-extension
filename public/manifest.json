@@ -3,10 +3,14 @@
   "description": "TLDR;it is a free tool that allows you to summarize any article or content you browse",
   "version": "1.0.0",
   "manifest_version": 3,
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "Open TLDR-it"
-  },
+  },  
+  "permissions": [
+    "tabs"
+  ],
+
   "icons": {
     "16": "logo192.png",
     "48": "logo192.png",

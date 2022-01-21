@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { useSummary } from '../hooks/summary';
 
 export const Creator = () => {
+  const navigate = useNavigate();
   const { summary, addSummary } = useSummary();
 
   const [shareSummary, setShareSummary] = useState(0);
@@ -11,6 +14,7 @@ export const Creator = () => {
     if (shareSummary > 0 && text.length > 0) {
       addSummary(text);
       setText('');
+      navigate('/');
     }
   }, [shareSummary]);
 
