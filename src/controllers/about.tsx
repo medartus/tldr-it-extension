@@ -12,7 +12,11 @@ const About = () => {
         </p>
         <p className="text-lg text-justify font-medium mb-4">
           The source code is available on
-          <a className="text-indigo-300" href="https://cutt.ly/jIxJbK0">
+          <a
+            className="text-indigo-300"
+            href="https://cutt.ly/jIxJbK0"
+            target="_blank"
+          >
             {' '}
             Github
           </a>
@@ -26,7 +30,11 @@ const About = () => {
         </p>
         <p className="text-lg text-justify font-medium mb-4">
           For example, you can share
-          <a className="text-indigo-300" href="">
+          <a
+            className="text-indigo-300"
+            href="https://medartus.medium.com/increase-productivity-by-reading-summarized-content-86436411a080"
+            target="_blank"
+          >
             {' '}
             this article{' '}
           </a>
@@ -36,12 +44,20 @@ const About = () => {
         <p className="text-lg text-justify font-medium mb-4">
           This tool is made with ❤️ by Marc-Etienne Dartus. You can contact me
           via
-          <a className="text-indigo-300" href="https://cutt.ly/HIxJW2z">
+          <a
+            className="text-indigo-300"
+            href="https://cutt.ly/HIxJW2z"
+            target="_blank"
+          >
             {' '}
             Twitter{' '}
           </a>
           or
-          <a className="text-indigo-300" href="https://cutt.ly/lIxJYnQ">
+          <a
+            className="text-indigo-300"
+            href="https://cutt.ly/lIxJYnQ"
+            target="_blank"
+          >
             {' '}
             LinkedIn
           </a>
